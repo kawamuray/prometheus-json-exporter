@@ -108,6 +108,18 @@ example_value_count{environment="beta",id="id-C"} 3
 ```
 For futher information about TLS configuration, please visit: [exporter-toolkit/https](https://github.com/prometheus/exporter-toolkit/blob/v0.1.0/https/README.md)
 
+# Flags
+
+* `--port`: port exposing the metrics. Default: 7979
+* `--interval`: scraping interval of the json api request. Default: 60 seconds
+* `--log-level`: logging level. Default: info
+
+The following example sets the json api scraping to 30 seconds.
+
+```sh
+$ ./json_exporter --interval=30  http://localhost:8000/example/data.json example/config.yml
+```
+
 # Docker
 
 ```console
